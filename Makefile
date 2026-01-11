@@ -1,7 +1,7 @@
 # Build STL files from SCAD sources
 
 # Variables
-OPENSCAD = openscad-nightly
+OPENSCAD = openscad
 OPENSCAD_FLAGS = --backend=manifold --enable=lazy-union --enable=roof
 RENDER_DIR = renders
 SOURCE_FILES = dst-box-collar.scad dst-box-up-stopper.scad dst-press-guage.scad dst-rod-stopper.scad dst-sand-collect-funnel.scad dst-spacer.scad
