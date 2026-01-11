@@ -16,13 +16,17 @@ module dst_press_guide(width = 120, depth = 120, tolerance = 0.5, thickness = 1,
           // 幅方向のスペーサー
           xflip_copy(offset=w / 2) cuboid([guide_thickness, w, guide_height], anchor=BOTTOM + RIGHT);
           // 取っ手
-          cyl(l=handle_length, d=10, rounding1=-5, rounding2=1.5, anchor=BOTTOM, $fa=0.1, $fs=0.1);
+          cyl(l=handle_length, d=10, rounding1=-5, rounding2=1.5, anchor=BOTTOM);
           grid_copies(spacing=w / 2, n=2)
-            cyl(l=handle_length, d=10, rounding1=-5, rounding2=1.5, anchor=BOTTOM, $fa=0.1, $fs=0.1);
+            cyl(l=handle_length, d=10, rounding1=-5, rounding2=1.5, anchor=BOTTOM);
         }
     children();
   }
 }
 
+// 印刷時は以下を有効化する
+// gitではファイルサイズが大きすぎてcommitできないため、無効化した状態でcommitしている
+// $fa=0.1;
+// $fs=0.1;
 render()
   dst_press_guide(thickness=2, anchor=BOTTOM);
