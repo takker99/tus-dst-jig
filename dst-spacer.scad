@@ -22,7 +22,7 @@ module dst_spacer(outer_width = 170, outer_depth = 70, spacer_width = 10, spacer
             position(BACK) {
               support_size = handle_size * 0.95;
               xflip_copy(offset=guide_width / 2 + support_size / 2)
-                fillet(l=spacer_thickness, r=support_size, ang=90, anchor=FRONT);
+                fillet(l=2, r=support_size, ang=90, anchor=FRONT);
               // prismoid(size1=[support_size, spacer_thickness], size2=[0, spacer_thickness], shift=[-support_size / 2, 0], h=support_size);
             }
           }
