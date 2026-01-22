@@ -35,3 +35,4 @@ module dst_spacer(outer_width = 170, outer_depth = 70, spacer_width = 10, spacer
 render()
   xrot(90)
     dst_spacer(outer_width=170.6, outer_depth=70, spacer_width=9, guide_thickness=1, spacer_thickness=1.775197557 + 0.3, anchor=FRONT, $fn=100);
+    // 混合率0%は1.775197557+0.3, 30%は5.269788182+0.3とした
