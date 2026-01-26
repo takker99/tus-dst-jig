@@ -15,6 +15,7 @@ module dst_rod_stopper(distance_of_rod = 90, rod_diameter = 20, tolerance = 0.5,
   d = rod_diameter + tolerance + thickness * 2;
 
   attachable(anchor, spin, orient, size=[w, d, height]) {
+    diff()
     cuboid([distance_of_rod - tolerance, bridge_thickness, height]) {
       position(LEFT)
         right(thickness)
@@ -22,6 +23,10 @@ module dst_rod_stopper(distance_of_rod = 90, rod_diameter = 20, tolerance = 0.5,
       attach(RIGHT, RIGHT)
         down(thickness)
           clamp(rod_diameter=rod_diameter, tolerance=tolerance, height=height, thickness=thickness);
+      tag("remove") position(BOTTOM)
+        zscale(0.5) ycyl(l=bridge_thickness,r=(distance_of_rod-tolerance-thickness*2)/2);
+      tag("remove") position(TOP)
+        zscale(0.5) ycyl(l=bridge_thickness,r=(distance_of_rod-tolerance-thickness*2)/2);
     }
     children();
   }
@@ -30,4 +35,4 @@ module dst_rod_stopper(distance_of_rod = 90, rod_diameter = 20, tolerance = 0.5,
 $fa = 4;
 $fs = 0.25;
 render()
-  dst_rod_stopper(distance_of_rod=90, rod_diameter=20, tolerance=0.5, thickness=3, bridge_thickness=3, height=30, anchor=BOTTOM);
+  dst_rod_stopper(distance_of_rod=90, rod_diameter=20, tolerance=0.5, thickness=2, bridge_thickness=1, height=70, anchor=BOTTOM);

@@ -5,9 +5,9 @@ $fs = 0.25;
 
 id1 = 22;
 id2 = 14;
-height = 62;
+height = 57;
 offset = 5;
-wall = 3;
+wall = 2;
 curved_part_height = height - offset * 2;
 handle_length = curved_part_height * 0.6;
 inner = zrot(90, [[0, id1 / 2], [0 + handle_length, id1 / 2], [curved_part_height - handle_length, id2 / 2], [curved_part_height, id2 / 2]]);
