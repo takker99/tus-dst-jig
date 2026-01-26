@@ -30,4 +30,4 @@ module dst_rod_stopper(distance_of_rod = 90, rod_diameter = 20, tolerance = 0.5,
 $fa = 4;
 $fs = 0.25;
 render()
-  dst_rod_stopper(distance_of_rod=90, rod_diameter=20, tolerance=0.5, thickness=3, bridge_thickness=3, height=30, anchor=BOTTOM);
+  dst_rod_stopper(distance_of_rod=90, rod_diameter=20, tolerance=0.5, thickness=2, bridge_thickness=1, height=70, anchor=BOTTOM);
