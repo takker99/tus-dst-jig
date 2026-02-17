@@ -4,7 +4,7 @@
 OPENSCAD = openscad
 OPENSCAD_FLAGS = --backend=manifold --enable=lazy-union --enable=roof
 RENDER_DIR = renders
-SOURCE_FILES = dst-box-collar.scad dst-box-up-stopper.scad dst-press-guage.scad dst-rod-stopper.scad dst-sand-collect-funnel.scad dst-spacer.scad
+SOURCE_FILES = dst-box-collar.scad dst-box-up-stopper.scad dst-press-guage.scad dst-rod-stopper.scad dst-sand-collect-funnel.scad dst-spacer.scad motor-vertical-pedestal.scad motor-horizontal-pedestal.scad
 TARGET_FILES = $(patsubst %.scad,$(RENDER_DIR)/%.stl,$(SOURCE_FILES))
 
 # Default target
